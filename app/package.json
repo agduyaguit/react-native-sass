@@ -12,17 +12,6 @@
   "jest": {
     "preset": "jest-expo"
   },
-  "expo": {
-    "packagerOpts": {
-      "sourceExts": [
-        "js",
-        "jsx",
-        "scss",
-        "sass"
-      ],
-      "transformer": "node_modules/react-native-sass-transformer/index.js"
-    }
-  },
   "dependencies": {
     "expo": "^27.0.1",
     "react": "16.3.1",

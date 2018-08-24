@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, TouchableOpacity, TextInput, KeyboardAvoidingView } from 'react-native';
+import Styles from './index.sass';
 //import Styles from './index.scss';
 
 class Login extends React.Component {
@@ -22,23 +23,23 @@ class Login extends React.Component {
 		const { username, password } = this.state;
 
 		return (
-			<KeyboardAvoidingView behavior="padding" style={{ flexDirection: 'row', flexWrap: 'wrap'}}>
-				<Text>Hi There!</Text>
+			<KeyboardAvoidingView behavior="padding" style={Styles.box}>
+				<Text style={Styles.label}>Hi There!</Text>
 
 				<TextInput
 					value={username}
 					onChangeText={(text) => this.onHandleTextChange({ username: text })}
-					// style={Styles.input}
+					style={Styles.inputClass}
 				/>
 
 				<TextInput
 					value={password}
 					secureTextEntry
 					onChangeText={(text) => this.onHandleTextChange({ password: text })}
-					// style={Styles.input}
+					style={Styles.inputClass}
 				/>
 
-				<TouchableOpacity>
+				<TouchableOpacity style={Styles.button}>
 					<Text>Sign In</Text>
 				</TouchableOpacity>
 
